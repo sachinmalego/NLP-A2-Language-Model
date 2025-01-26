@@ -54,6 +54,7 @@ The web application allows you to:
 - `documents/`: Contains the pdf documents of the A2 assignment.
 - `screenshots/`: Contains the screenshots and video of the working application.
 - `datasets`: Contains the text repo of provided dataset
+- `best-val-lstm_lm.pt`: This file is not added in the pickle folder due to large size however this will be generated automatically when the jupyter notebook is executed.
 
 ## Video of Working application:  
 https://drive.google.com/file/d/1Y0JF2sfW6w1TMBjQl3zMfmvAWBkNXSc8/view?usp=sharing
