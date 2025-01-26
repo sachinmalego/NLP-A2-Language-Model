@@ -53,7 +53,7 @@ The web application allows you to:
 - `app/`: Contains the web application code and necessary files.
 - `documents/`: Contains the pdf documents of the A2 assignment.
 - `screenshots/`: Contains the screenshots and video of the working application.
-- `word_test`: Contains the word repo of provided dataset
+- `datasets`: Contains the text repo of provided dataset
 - For the `glove.6B.100d.txt` please download it from Kaggle or Google. It is readily available in the internet.
 
 ## Video of Working application:  
