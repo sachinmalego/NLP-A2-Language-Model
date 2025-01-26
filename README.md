@@ -54,7 +54,6 @@ The web application allows you to:
 - `documents/`: Contains the pdf documents of the A2 assignment.
 - `screenshots/`: Contains the screenshots and video of the working application.
 - `datasets`: Contains the text repo of provided dataset
-- For the `glove.6B.100d.txt` please download it from Kaggle or Google. It is readily available in the internet.
 
 ## Video of Working application:  
 https://drive.google.com/file/d/1Y0JF2sfW6w1TMBjQl3zMfmvAWBkNXSc8/view?usp=sharing
