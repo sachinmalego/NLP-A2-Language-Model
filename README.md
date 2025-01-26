@@ -59,7 +59,7 @@ The web application allows you to:
 ## Video of Working application:  
 https://drive.google.com/file/d/1Y0JF2sfW6w1TMBjQl3zMfmvAWBkNXSc8/view?usp=sharing
 
-![Description of GIF]()
+![Description of GIF](screenshots/Applicationvideo.gif)
 
 ## Contributing
 Contributions are welcome! To contribute:
