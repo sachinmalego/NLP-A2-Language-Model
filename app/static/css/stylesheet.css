@@ -1,0 +1,229 @@
+/* Reset and box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+body {
+    font-family: 'Aleo', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+}
+
+select{
+    font-family: 'Aleo', sans-serif;
+}
+
+input{
+    font-family: 'Aleo', sans-serif;
+}
+
+.web_title{
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #bb86fc;
+}
+
+/* Content */
+.content {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Query box */
+/* General Form Styling */
+.query_box {
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.query_box .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.query_box label {
+    flex: 1; /* Label takes up one part of the space */
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.query_box select,
+.query_box input {
+    flex: 2; /* Input/dropdown takes up two parts of the space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.query_box button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.query_box button:hover {
+    background-color: #3700b3;
+    transform: scale(1.05);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #6200ea;
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Elevation (Material Design shadows) */
+.elevation-1 {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.elevation-2 {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.elevation-3 {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Tooltip */
+/* Styling the span element with a question mark */
+span[title] {
+    position: relative;
+    cursor: pointer;
+    color: #007bff; /* Blue color for visibility */
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* Tooltip styling */
+span[title]::after {
+    content: attr(title); /* Use the title attribute as tooltip content */
+    position: absolute;
+    bottom: 125%; /* Position the tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 0.85rem;
+    opacity: 0; /* Hide tooltip by default */
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Tooltip arrow */
+span[title]::before {
+    content: '';
+    position: absolute;
+    bottom: 110%; /* Position the arrow just above the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent; /* Arrow pointing down */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show tooltip on hover */
+span[title]:hover::after,
+span[title]:hover::before {
+    opacity: 1;
+    visibility: visible;
+}

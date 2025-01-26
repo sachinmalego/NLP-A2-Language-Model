@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>A2: Language Model</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <header>
+        <div class="logo">
+            <h1><b>A2: Language Model</b></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="query_box">
+        <h3 class="web_title">Enter to generate content</h3>
+        </br>
+        <form action="/" method="POST">
+            <div class="form-row">
+                <label for="query">Prompt:</label>
+                <input type="text" name="prompt" id="fill_in" placeholder="Type text..." required>
+            </div>
+            <div class="form-row">
+                <label for="query">Temperature: <span title="Smaller the temperature, more diverse tokens but comes with a tradeoff of less-make-sense sentence.">(?)</span></label>
+                <input type="number" name="temperature" id="fill_in" min="0.1" max="1.0"  value="0.5" step="0.1" required="required" placeholder="Enter temperature" required>
+            </div>
+            <div class="form-row">
+                <label for="max_seq_len">Length: <span title="Length of the generated text limit set to max 100 words for fast processing.">(?)</span></label>
+                <input type="number" name="max_seq_len" id="fill_in" min="10" max="100" value="50" step="1" required>
+            </div>
+            <div class="form-row">
+                <label for="seed">Seed:</label>
+                <input type="number" name="seed" id="fill_in" value="0" required>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <h4 style="display: {{ show_text }}">Generated Text Output:</h4>
+    <p style="display: {{ show_text }}">{{ output }}</p>
+
+</div>
+{% endblock %}
